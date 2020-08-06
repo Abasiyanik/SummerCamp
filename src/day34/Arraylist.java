@@ -24,6 +24,7 @@ public class Arraylist {
 
         System.out.println(max);
         System.out.println(min);
+        //hellooooo
 
     }
 }
