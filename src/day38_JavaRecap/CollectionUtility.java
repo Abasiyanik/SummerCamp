@@ -78,5 +78,4 @@ public class CollectionUtility {
         System.out.println(list);//10, 9, 10, 100000, 4543, -4, 45, 56, 100000, 87, 4346, -1]
 
 
-
     }}
