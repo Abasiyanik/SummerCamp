@@ -16,6 +16,7 @@ public class birthday {
     public static void HappyBirthDay(int year, int month, int day){
         LocalDate birthday = LocalDate.of(year, month, day);
         LocalDate today = LocalDate.now();
+        System.out.println(today);
 
         int month2 = today.getMonthValue();
         int day2 = today.getDayOfMonth();

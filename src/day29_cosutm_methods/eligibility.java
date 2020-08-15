@@ -1,4 +1,4 @@
-package day_29_cosutm_methods;
+package day29_cosutm_methods;
 
 public class eligibility {
 
