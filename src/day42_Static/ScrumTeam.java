@@ -21,37 +21,36 @@ public class ScrumTeam {
 
     }
     //simdi addTester yapiyoruz ve bu instance olacak zira sadece ilgili ozel team icine ekleneceginden
-    public void addTester (Tester tester){
-        //how do i add tester into Test
-        testers.add(tester);//tester ArrayList uykarida acildi buradaki class Tester classi ise onceden olusturuldu
-
-
+    public void addTester(Tester tester){
+        testers.add(tester);
     }
-    public void addTesters (Tester [] testers){
-        if(testers.length==0){ return;}
 
-        this.testers.addAll(Arrays.asList(testers));//this.testers inctance varialbe boylece local variable ile
-        // instance variable arasindaki farki anlatmis olduk. ikinci testers ise local variable
+    public void addTester(Tester[] testers){
+        if(testers.length ==0){
+            return;
+        }
+        this.testers.addAll(Arrays.asList(testers) );
     }
-    public void removeTester(long emloyeeID){
-        testers.removeIf(p-> p.employessID==emloyeeID);
+
+    public void removeTester(long employeeID){ // 007
+        testers.removeIf( p -> p.employessID == employeeID);
+        //              each employee id,  == 007
     }
+
     public void addDeveloper(Developer developer){
-        //how do i add tester into Test
-        developers.add(developer);//tester ArrayList uykarida acildi buradaki class Tester classi ise onceden olusturuldu
-
-
-    }
-    public void addDevelopers (Developer [] developers){
-        if(developers.length==0){ return;}
-
-        this.developers.addAll(Arrays.asList(developers));//this.testers inctance varialbe boylece local variable ile
-        // instance variable arasindaki farki anlatmis olduk. ikinci testers ise local variable
-    }
-    public void removeDeveloper(long emloyeeID){
-        developers.removeIf(p-> p.employessID==emloyeeID);
+        developers.add(developer);
     }
 
+    public void addDeveloper(Developer[] developers){
+        if(developers.length ==0){ // to check if the array is empty
+            return;
+        }
+        this.developers.addAll(Arrays.asList(developers) );
+    }
+
+    public void removeDeveloper(long employeeID){
+        developers.removeIf( p -> p.employessID == employeeID );
+    }
     public String toString(){
         return testers.size()+" testers, "+ developers.size()+" developers, PO: "+PO+", BA: "+BA+", SM: "+SM;
     }
