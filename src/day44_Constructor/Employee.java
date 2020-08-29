@@ -43,7 +43,6 @@ public class Employee {
 
         return "Name: "+name+"\n Gender: "+gender+"\n ID: "+id+"\nSSN: "+ssn+"\n JobTitle: "+jobTitle+
                 "\n Salary: "+salary;
-
         }
 
 }

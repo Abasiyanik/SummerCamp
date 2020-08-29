@@ -2,8 +2,8 @@ package day43_static;
 
        // import static Library.Resources.a;
 
-import static Library.Resources.aa;
-import static Library.Resources.*;
+//import static Library.Resources.aa;
+//import static Library.Resources.*;
 import java.util.Arrays;
 
 public class test {
