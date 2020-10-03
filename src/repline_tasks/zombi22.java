@@ -11,6 +11,7 @@ public class zombi22 {
             for(int i=0; i<inhabitants.length; i++) {
                 inhabitants[i] = input.nextInt();
             }
+
             int [] ends=new int [inhabitants.length];
             int days = 0;
             System.out.println("Day " + days + " " + Arrays.toString(inhabitants));

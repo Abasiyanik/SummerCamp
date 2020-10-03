@@ -1,4 +1,5 @@
 package Library;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Util {
@@ -517,4 +518,48 @@ public class Util {
         return arr3;
     }
     // combines two array and returns it
+    public static void sleep(double seconds) {// sleep it by using this method.
+        try {
+            Thread.sleep((long)(seconds * 1000));
+        }catch (InterruptedException e){
+
+        }
+        //sleep for second
+    }
+    //this is a custom class whose function is to convert a char array to a string
+    public static String toString(char[] a)
+    {
+        //simoly convert char to a string. do not forgert String is a custom class
+        String string = new String(a);
+        return string;
+    }
+
+    public static  String [] arr (String password){
+        //produce two char arrays from the key word
+        char [] str=password.toCharArray();
+        char[] container=password.toCharArray();
+        //make one array list and a string ready
+        ArrayList<String> negCred=new ArrayList<>();
+        String container1="";
+        for (int i=0; i<=container.length-1; i++ ){
+            //ocnvert only the sepecific letter; if it is capital it makes it small; if it is lower case it makes it upper case
+            if (container[i]>='a' && container[i]<='z'){
+                container[i]= (char) (container[i]-32);
+            }
+            else if(container[i]>='A' && container[i]<='Z') {container[i] = (char) (container[i] + 32); }
+            //if it is not letter, skip the step
+            else {continue;}
+            container1=toString(container);
+            negCred.add(container1);
+            container[i]=str[i];
+        }
+
+        String [] arr=negCred.toArray(new String[0]);
+
+        return arr;
+    }
+    //this custom class which produce a variation of string. in each iteration it changes the letter case: capital or small. The return is array
+
+
+
 }
